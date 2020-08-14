@@ -1,0 +1,30 @@
+<h1>Budget App</h1>
+<a href="new">Add new Item</a>
+<br>
+<br>
+<table>
+  <tr>
+    <th align="left">Month</th>
+    <th>Total Cost</th>
+  </tr>
+  <% session[:data].each do |month| %>
+      <tr>
+        <td>
+          <a href="month/<%= month[0] %>">
+            <%= month[0] %>
+          </a>
+        </td>
+        <td>$<%= '%.2f' % month[1].values.inject{|acc,it| acc + it} %></td>
+      </tr>
+  <% end %>
+  <tr>
+    <td class="total">
+        Yearly Total
+    </td>
+    <div>
+    <td>
+      $<%= yearly_total %>
+    </td>
+    </div>
+  </tr>
+</table>

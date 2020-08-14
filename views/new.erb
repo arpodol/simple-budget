@@ -1,0 +1,32 @@
+<p1 class="page_title">Add a new budget item</p1>
+<form method="post" action="/new">
+  <div>
+    <label for="name">Name:
+      <input name="name" id="name" value="<%=params[:name] %>">
+    </label>
+  </div>
+  <div>
+    <label for="cost">Cost:
+      <input name="cost" id="cost" value="<%=params[:cost] %>">
+    </label>
+  </div>
+  <div>
+    <label for="month">Month:
+      <select name="month" id="month" value="<%=params[:month] %>">
+        <option value="January">January</option>
+        <option value="February">February</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
+      </select>
+    </label>
+  </div>
+  <button type="submit">Submit</button>
+</form>
